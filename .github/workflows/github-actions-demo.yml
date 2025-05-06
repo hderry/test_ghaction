@@ -8,9 +8,7 @@ branding:
 on:
   repository_dispatch
 
-jobs:
-  begin_sync:
-   runs:
-       using: "docker"
-       image: "Dockerfile"
+runs:
+   using: "docker"
+   image: "Dockerfile"
 
