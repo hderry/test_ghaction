@@ -1,18 +1,15 @@
-
-name: gh_sync_workflow 
-
-description: "Run after new repository is created under NOAA-GFDL organization. "
-branding: 
-   icon: 'check-circle'
-   color: 'blue'
-
-on: 
-  repository_dispatch  
-
-jobs:   
-  begin_sync: 
-   runs:
-       using: "docker"
-       image: "../../Dockerfile"
-        
-
+name: 'Hello World'
+description: 'Greet someone and record the time'
+inputs:
+  who-to-greet:  # id of input
+    description: 'Who to greet'
+    required: true
+    default: 'World'
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.who-to-greet }}
