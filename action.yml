@@ -13,6 +13,6 @@ jobs:
   begin_sync: 
    runs:
        using: "docker"
-       image: "Dockerfile"
+       image: "../../Dockerfile"
         
 
