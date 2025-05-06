@@ -1,0 +1,16 @@
+name: gh_sync_workflow
+
+description: "Run after new repository is created under NOAA-GFDL organization. "
+branding:
+   icon: 'check-circle'
+   color: 'blue'
+
+on:
+  repository_dispatch
+
+jobs:
+  begin_sync:
+   runs:
+       using: "docker"
+       image: "Dockerfile"
+
