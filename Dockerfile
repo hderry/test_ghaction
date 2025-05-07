@@ -5,7 +5,7 @@ FROM python:3-slim AS builder
 WORKDIR /app
 COPY . /app 
 
-RUN 'ls /app'
+RUN ls /app
 
 RUN pip install --target=/app requests
 RUN pip install --target=/app pytest
