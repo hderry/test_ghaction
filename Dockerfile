@@ -14,5 +14,6 @@ FROM ubuntu:24.04
 COPY --from=builder /app /app 
 WORKDIR /app
 ENV PYTHONPATH "/app"
+RUN chmod u+x /app/test.py
 
 ENTRYPOINT ["/app/test.py"]
