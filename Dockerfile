@@ -1,9 +1,11 @@
 #Python 3 Slim base image
 FROM python:3-slim AS builder
 
-ADD . /app
+#ADD . /app
 WORKDIR /app
-#COPY . /app 
+COPY . /app 
+
+RUN 'ls /app'
 
 RUN pip install --target=/app requests
 RUN pip install --target=/app pytest
