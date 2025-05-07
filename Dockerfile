@@ -13,6 +13,6 @@ RUN pip install --target=/app pytest
 FROM ubuntu:24.04
 COPY --from=builder /app /app 
 WORKDIR /app
-#ENV PYTHONPATH "/app:/app/github:/app/gitlab"
+ENV PYTHONPATH "/app"
 
-ENTRYPOINT ["app/test.py"]
+ENTRYPOINT ["/app/test.py"]
