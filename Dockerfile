@@ -8,7 +8,7 @@ WORKDIR /app
 RUN pip install --target=/app requests
 RUN pip install --target=/app pytest
 
-FROM ubuntu-24.04
+FROM ubuntu:24.04
 COPY --from=builder /app /app 
 WORKDIR /app
 #ENV PYTHONPATH "/app:/app/github:/app/gitlab"
