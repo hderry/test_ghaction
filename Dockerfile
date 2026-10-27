@@ -15,5 +15,6 @@ RUN pip install --target=/app pytest
 #WORKDIR /app
 ENV PYTHONPATH "/app"
 RUN chmod u+x /app/test.py
+WORKDIR /app
 
-ENTRYPOINT ["/app/test.py"]
+ENTRYPOINT ["python", "/app/test.py"]
